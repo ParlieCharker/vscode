@@ -180,7 +180,7 @@ async function findFreePort(start, port, end) {
 	const http = require('http');
 	return new Promise((resolve, reject) => {
 		if (port > end) {
-			throw new Error(`Could not find free port in range: ${start}-${end}`)
+			throw new Error(`Could not find free port in range: ${start}-${end}`);
 		}
 
 		const server = http.createServer();
@@ -189,7 +189,7 @@ async function findFreePort(start, port, end) {
 			resolve(port);
 		}).on('error', () => {
 			resolve(findFreePort(start, port + 1, end));
-		})
+		});
 	});
 }
 
