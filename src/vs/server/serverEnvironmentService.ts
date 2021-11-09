@@ -59,6 +59,7 @@ export const serverOptions: OptionDescriptions<ServerParsedArgs> = {
 
 export interface ServerParsedArgs {
 	port?: string;
+	'pick-port'?: string;
 	connectionToken?: string;
 	/**
 	 * A path to a filename which will be read on startup.
